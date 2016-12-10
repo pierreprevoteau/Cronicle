@@ -9,4 +9,4 @@ RUN cd /src && bin/control.sh setup
 EXPOSE  3012
 
 WORKDIR /src
-CMD ["./bin/debug.sh", "--master"]
+CMD ["node", "--expose_gc", "--always_compact", "/src/lib/main.js"]
