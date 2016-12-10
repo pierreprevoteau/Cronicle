@@ -8,4 +8,4 @@ RUN cd /src && node bin/build.js dist
 EXPOSE  3012
 
 WORKDIR /src
-CMD ["/bin/control.sh", "start"]
+CMD ["./bin/debug.sh"]
