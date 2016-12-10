@@ -3,7 +3,7 @@ MAINTAINER  Pierre Prevoteau <p.prevoteau@woody-technologies.com>
 
 ADD . /src
 RUN cd /src && npm install
-RUN node bin/build.js dist
+RUN cd /src && node bin/build.js dist
 
 EXPOSE  3012
 
