@@ -8,4 +8,5 @@ RUN cd /src && bin/control.sh setup
 
 EXPOSE  3012
 
-CMD ["cd /src && node --expose_gc --always_compact lib/main.js --echo"]
+WORKDIR /src
+CMD node --expose_gc --always_compact /src/lib/main.js --echo
