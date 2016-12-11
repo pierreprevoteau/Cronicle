@@ -9,4 +9,4 @@ RUN cd /src && bin/control.sh setup
 EXPOSE  3012
 
 WORKDIR /src
-CMD ["bin/control.sh", "start", "&&", "tail", "-f", "logs/Cronicle.log"]
+CMD ["node", "--expose_gc", "--always_compact" "lib/main.js", "--echo"]
