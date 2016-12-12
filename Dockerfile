@@ -2,8 +2,9 @@ FROM ubuntu:latest
 MAINTAINER  Pierre Prevoteau <p.prevoteau@woody-technologies.com>
 
 RUN apt-get update && apt-get install -y supervisor nodejs npm git
-RUN mkdir -p /var/log/supervisor
+RUN apt-get upgrade
 
+RUN mkdir -p /var/log/supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 RUN cd /opt && git clone https://github.com/jhuckaby/Cronicle
