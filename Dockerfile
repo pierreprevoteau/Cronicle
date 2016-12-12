@@ -6,10 +6,12 @@ RUN mkdir -p /var/log/supervisor
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-ADD . /src
-RUN cd /src && npm install
-RUN cd /src && node bin/build.js dist
-RUN cd /src && bin/control.sh setup
+RUN mkdir -p /opt/cronicle/
+ADD . /opt/cronicle/
+
+RUN cd /opt/cronicle && npm install
+RUN cd /opt/cronicle && node bin/build.js dist
+RUN cd /opt/cronicle && bin/control.sh setup
 
 EXPOSE  80
 
