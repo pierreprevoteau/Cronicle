@@ -5,8 +5,10 @@ ADD . /src
 RUN cd /src && npm install
 RUN cd /src && node bin/build.js dist
 RUN cd /src && bin/control.sh setup
+RUN ls
 
 EXPOSE  3012
 
 WORKDIR /src
-CMD node --expose_gc --always_compact /src/lib/main.js --echo
+RUN ls
+CMD node --expose_gc --always_compact /src/lib/main.js --echo "$@"
