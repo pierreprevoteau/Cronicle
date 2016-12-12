@@ -11,6 +11,6 @@ RUN cd /src && npm install
 RUN cd /src && node bin/build.js dist
 RUN cd /src && bin/control.sh setup
 
-EXPOSE  3012
+EXPOSE  80
 
 CMD ["/usr/bin/supervisord"]
