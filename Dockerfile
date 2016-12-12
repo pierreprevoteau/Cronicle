@@ -13,6 +13,4 @@ RUN cd /src && bin/control.sh setup
 
 EXPOSE  3012
 
-RUN /src/bin/control.sh start
-
 CMD ["/usr/bin/supervisord"]
