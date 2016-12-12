@@ -2,7 +2,7 @@ FROM ubuntu:latest
 MAINTAINER  Pierre Prevoteau <p.prevoteau@woody-technologies.com>
 
 RUN apt-get update && apt-get install -y supervisor nodejs npm git
-RUN apt-get upgrade
+RUN apt-get upgrade -y
 
 RUN mkdir -p /var/log/supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
