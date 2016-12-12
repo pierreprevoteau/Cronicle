@@ -1,14 +1,17 @@
 FROM node:latest
 MAINTAINER  Pierre Prevoteau <p.prevoteau@woody-technologies.com>
 
+RUN apt-get update && apt-get install -y supervisor
+RUN mkdir -p /var/log/supervisor
+
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
 ADD . /src
 RUN cd /src && npm install
 RUN cd /src && node bin/build.js dist
 RUN cd /src && bin/control.sh setup
-RUN ls
 
 EXPOSE  3012
 
 WORKDIR /src
-RUN ls
-CMD node --expose_gc --always_compact /src/lib/main.js --echo "$@"
+CMD ["/usr/bin/supervisord"]
