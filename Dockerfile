@@ -11,7 +11,6 @@ ADD . /opt/cronicle/
 
 RUN cd /opt/cronicle && npm install
 RUN cd /opt/cronicle && node bin/build.js dist
-RUN cd /opt/cronicle && bin/control.sh setup
 
 EXPOSE  80
 
