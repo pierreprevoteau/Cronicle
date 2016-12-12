@@ -1,5 +1,5 @@
 {
-	"base_app_url": "http://localhost:3012",
+	"base_app_url": "http://localhost:80",
 	"email_from": "admin@localhost",
 	"smtp_hostname": "localhost",
 	"smtp_port": 25,
@@ -67,7 +67,7 @@
 	},
 	
 	"WebServer": {
-		"http_port": 3012,
+		"http_port": 80,
 		"http_htdocs_dir": "htdocs",
 		"http_max_upload_size": 104857600,
 		"http_static_ttl": 3600,
@@ -81,7 +81,7 @@
 		},
 		
 		"https": 0,
-		"https_port": 3013,
+		"https_port": 443,
 		"https_cert_file": "conf/ssl.crt",
 		"https_key_file": "conf/ssl.key",
 		"https_force": 0,
