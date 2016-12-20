@@ -1,5 +1,5 @@
 {
-	"base_app_url": "http://localhost:80",
+	"base_app_url": "http://cronicle:8080",
 	"email_from": "admin@localhost",
 	"smtp_hostname": "localhost",
 	"smtp_port": 25,
@@ -67,7 +67,7 @@
 	},
 	
 	"WebServer": {
-		"http_port": 80,
+		"http_port": 8080,
 		"http_htdocs_dir": "htdocs",
 		"http_max_upload_size": 104857600,
 		"http_static_ttl": 3600,
