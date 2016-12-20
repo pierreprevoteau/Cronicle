@@ -12,5 +12,6 @@ RUN cd /opt/Cronicle && npm install
 RUN cd /opt/Cronicle && node bin/build.js dist
 
 EXPOSE  8080
+EXPOSE  443
 
 CMD ["/usr/bin/supervisord"]
