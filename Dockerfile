@@ -10,7 +10,6 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN cd /opt && git clone https://github.com/jhuckaby/Cronicle
 RUN cd /opt/Cronicle && npm install
 RUN cd /opt/Cronicle && node bin/build.js dist
-RUN cd /opt/Cronicle && bin/control.sh setup
 
 EXPOSE  80
 
